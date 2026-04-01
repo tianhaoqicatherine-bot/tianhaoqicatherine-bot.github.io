@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
 
   trailingSlash: true,
 
+  // Disable devtools indicator in development
+  devIndicators: false,
+
   // Turbopack configuration (used in development)
   turbopack: {
     resolveExtensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],

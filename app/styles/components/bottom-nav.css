@@ -1,0 +1,111 @@
+/* ========================================
+   BOTTOM NAVIGATION
+   Fixed bottom navigation for mobile-like experience
+   ======================================== */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottom-nav-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem calc(0.5rem + env(safe-area-inset-bottom));
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  color: var(--color-fg-light);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast) var(--ease-out);
+  flex: 1;
+  min-width: 0;
+}
+
+.bottom-nav-item:hover {
+  color: var(--color-fg);
+  background: var(--color-surface-subtle);
+}
+
+.bottom-nav-item.active {
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
+.bottom-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.bottom-nav-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-nav-label {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Desktop: Hide bottom nav, show top nav */
+@media screen and (min-width: 1024px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 736px) and (max-width: 1023px) {
+  .bottom-nav-container {
+    max-width: 500px;
+  }
+}
+
+/* Dark mode */
+[data-theme='dark'] .bottom-nav {
+  background: var(--color-bg-alt);
+  border-color: var(--color-border);
+}
+
+[data-theme='dark'] .bottom-nav-item:hover {
+  background: var(--color-surface-hover);
+}
+
+/* Animation for showing/hiding */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}

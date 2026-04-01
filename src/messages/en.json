@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "cases": "Products",
+    "workshop": "Workshop",
+    "writing": "Thoughts",
+    "contact": "Contact",
+    "resume": "Resume",
+    "downloadResume": "Download Resume"
+  },
+  "home": {
+    "slogan": "PM Intern | Data Platform & Commercialization",
+    "cta": {
+      "cases": "View Cases",
+      "contact": "Contact Me"
+    },
+    "chips": {
+      "university": "Zhejiang University",
+      "major": "AI Product",
+      "experience": "ByteDance Intern"
+    }
+  },
+  "about": {
+    "title": "About",
+    "sections": {
+      "profile": "Profile",
+      "education": "Education",
+      "internships": "Internships",
+      "projects": "Projects",
+      "campus": "Campus",
+      "skills": "Skills"
+    },
+    "contact": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "education": {
+      "master": "Master",
+      "bachelor": "Bachelor",
+      "ongoing": "Ongoing"
+    }
+  },
+  "cases": {
+    "title": "Product Cases",
+    "subtitle": "Complete cases from insights to launch, showcasing data-driven product methodology",
+    "featured": "Featured Cases",
+    "more": "More Cases",
+    "viewDetails": "View Full Case",
+    "liveDemo": "Live Demo",
+    "readPRD": "Read PRD",
+    "role": "Role",
+    "company": "Company",
+    "duration": "Duration"
+  },
+  "workshop": {
+    "title": "Creative Workshop",
+    "subtitle": "Work in progress, stuck, or early product ideas",
+    "status": {
+      "inProgress": "In Progress",
+      "stuck": "Stuck",
+      "concept": "Concept"
+    },
+    "labels": {
+      "inspiration": "Inspiration",
+      "challenge": "Challenges",
+      "createdAt": "Created"
+    }
+  },
+  "writing": {
+    "title": "Product Thoughts",
+    "subtitle": "Fragmented product observations, notes and blog posts",
+    "readMore": "Read More",
+    "categories": {
+      "methodology": "Methodology",
+      "industry": "Industry",
+      "case": "Case Study",
+      "tools": "Tools"
+    }
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggle": "Toggle Theme"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "English",
+    "switch": "Switch Language"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "back": "Back",
+    "view": "View",
+    "learnMore": "Learn More",
+    "comingSoon": "Coming Soon"
+  }
+}

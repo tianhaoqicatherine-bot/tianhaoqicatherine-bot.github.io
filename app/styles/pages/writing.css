@@ -13,31 +13,6 @@
   margin-bottom: 2rem;
 }
 
-.writing-header-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.writing-rss-link {
-  font-size: var(--text-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-fg-light);
-  text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xs);
-  transition:
-    color var(--duration-instant) var(--ease-out),
-    border-color var(--duration-instant) var(--ease-out);
-}
-
-.writing-rss-link:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
-}
-
 .writing-list {
   display: flex;
   flex-direction: column;

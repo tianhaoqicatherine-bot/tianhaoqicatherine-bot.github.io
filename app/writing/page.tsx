@@ -8,16 +8,11 @@ import { formatDate } from '@/lib/utils';
 
 export const metadata: Metadata = {
   ...createPageMetadata({
-    title: 'Writing',
+    title: '产品思考',
     description:
-      'Articles on AI security, LLM red teaming, and trust & safety.',
+      '分享产品方法论、行业观察、案例分析，记录产品路上的思考与成长。',
     path: '/writing/',
   }),
-  alternates: {
-    types: {
-      'application/rss+xml': '/feed.xml',
-    },
-  },
 };
 
 interface UnifiedItem {
@@ -100,17 +95,7 @@ export default function WritingPage() {
     <PageWrapper>
       <article className="writing-page">
         <header className="writing-header">
-          <div className="writing-header-row">
-            <h1 className="page-title">Writing</h1>
-            <a
-              href="/feed.xml"
-              className="writing-rss-link"
-              title="RSS Feed"
-              aria-label="RSS Feed"
-            >
-              RSS
-            </a>
-          </div>
+          <h1 className="page-title">产品思考</h1>
         </header>
 
         <div className="writing-list">

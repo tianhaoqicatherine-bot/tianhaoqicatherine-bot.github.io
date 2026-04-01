@@ -13,7 +13,7 @@ interface PageWrapperProps {
  */
 export default function PageWrapper({
   children,
-  hideFooter = false,
+  hideFooter = true,
   mainClassName,
 }: PageWrapperProps) {
   return (
