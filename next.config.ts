@@ -4,6 +4,10 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   output: 'export',
 
+  // GitHub Pages 部署配置
+  basePath: '/tianhaoqi.github.io',
+  assetPrefix: '/tianhaoqi.github.io/',
+
   // Allow dev server access from local network (mobile testing, etc.)
   allowedDevOrigins: ['http://192.168.*.*:3000'],
 
