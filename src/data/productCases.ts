@@ -79,6 +79,10 @@ const productCases: ProductCase[] = [
         '神经元激活视图：查看特定神经元的激活模式',
         '多模型对比：支持不同模型的推理过程对比',
       ],
+      designDecisions: [
+        '采用可视化优先的设计理念',
+        '支持实时交互和动态更新',
+      ],
     },
     metrics: {
       indicators: [],
@@ -132,6 +136,10 @@ const productCases: ProductCase[] = [
         '成就系统：解锁成就徽章，记录专注里程碑',
         '好友比拼：查看好友专注时长，增加社交动力',
       ],
+      designDecisions: [
+        '游戏化机制与专注功能深度结合',
+        '视觉反馈优先的设计理念',
+      ],
     },
     metrics: {
       indicators: [],
@@ -183,6 +191,10 @@ const productCases: ProductCase[] = [
         'UGC 评价：学长学姐的真实评价和避雷提醒',
         '智能推荐：基于位置和偏好的个性化推荐',
         '快速导航：一键跳转高德/百度地图导航',
+      ],
+      designDecisions: [
+        'UGC 内容优先的产品策略',
+        '本地化信息聚合的核心定位',
       ],
     },
     metrics: {
