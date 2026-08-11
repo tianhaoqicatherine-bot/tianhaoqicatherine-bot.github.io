@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Flow Recorder：把一次网页操作，变成可复用、可讲解、可分享的产品流程。" />
+    <title>Flow Recorder · 让每一次操作都可复用</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="landing.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div id="dayNightTransition" class="day-night-transition" aria-hidden="true">
+      <div class="transition-stars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="transition-moon"></span>
+      <span class="transition-sun"></span>
+      <span class="transition-horizon"></span>
+    </div>
+    <header class="site-nav">
+      <a class="brand" href="landing.html" aria-label="Flow Recorder 首页">
+        <span class="brand-mark">F<span></span></span>
+        <span>Flow Recorder</span>
+      </a>
+      <button class="mobile-menu" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="landingNav">菜单</button>
+      <nav id="landingNav" class="nav-links">
+        <a href="#capabilities">能力</a>
+        <a href="#how-it-works">怎么用</a>
+        <a href="#use-cases">适用场景</a>
+        <a href="#install">安装指南</a>
+        <a class="nav-workspace" href="https://github.com/tianhaoqicatherine-bot/record" target="_blank" rel="noreferrer">打开工作台 <b>↗</b></a>
+      </nav>
+      <button id="landingLanguageToggle" class="landing-language-toggle" type="button" aria-label="切换语言">EN</button>
+    </header>
+
+    <main>
+      <section class="hero page-section">
+        <div class="hero-copy">
+          <div class="eyebrow"><i></i> PRODUCT FLOW SYSTEM FOR TEAMS</div>
+          <h1>把一次操作，<br /><em>变成可复用的流程。</em></h1>
+          <p class="hero-lead">记录网页、捕捉关键画面、自动生成产品文案，让复杂的使用路径变成任何人都能跟随的清晰指引。</p>
+          <div class="hero-actions">
+            <a class="button button-primary extension-download-control" data-download-role="hero" href="#install" aria-disabled="false">下载插件并查看安装方法 <span class="download-dot">↓</span></a>
+            <a class="button button-ghost hero-github-link" href="https://github.com/tianhaoqicatherine-bot/record" target="_blank" rel="noopener noreferrer" aria-label="查看 Flow Recorder GitHub 仓库">查看 GitHub 仓库 <span>↗</span></a>
+          </div>
+          <div class="hero-meta"><span class="status-dot"></span> 在线协作 · 流程资产持续复用 <span class="meta-divider"></span> 支持 Markdown / 视频导出</div>
+        </div>
+        <div class="hero-stage" aria-label="Flow Recorder 工作台预览">
+          <div class="stage-orbit orbit-one"></div><div class="stage-orbit orbit-two"></div>
+          <div class="stage-window">
+            <div class="window-bar"><span class="window-light red"></span><span class="window-light yellow"></span><span class="window-light green"></span><span class="window-url">flow-recorder / editor</span><span class="window-live">● LIVE</span></div>
+            <div class="window-body">
+              <aside class="mock-sidebar"><div class="mock-logo">F</div><small>MY FLOWS</small><span class="mock-item active">▣ 新建数据看板</span><span class="mock-item">☆ 客户开户流程</span><span class="mock-item">◇ 流程广场</span></aside>
+              <div class="mock-editor"><div class="mock-editor-head"><span>新建数据看板</span><b>只读分享</b></div><div class="mock-step"><span class="step-number">01</span><div><small>打开页面</small><strong>进入数据工作台，找到「指标分析」</strong><div class="mock-line long"></div></div></div><div class="mock-step selected"><span class="step-number">02</span><div><small>点击操作</small><strong>选择需要展示的业务指标</strong><div class="mock-line"></div><div class="mock-shot"><span class="mock-cursor"></span><i></i><i></i><i></i></div></div></div><div class="mock-step faded"><span class="step-number">03</span><div><small>完成设置</small><strong>点击保存，生成新的报表</strong></div></div></div>
+            </div>
+          </div>
+          <div class="float-card float-capture"><span class="float-icon">✦</span><div><b>记录中</b><small>捕捉到第 02 步</small></div><span class="pulse-live"></span></div>
+          <div class="float-card float-share"><span class="share-symbol">↗</span><div><b>一键分享</b><small>只读流程已生成</small></div></div>
+        </div>
+      </section>
+
+      <section class="proof-strip page-section"><span>为产品团队打造</span><div class="proof-items"><span>产品演示</span><i></i><span>客服培训</span><i></i><span>内部 SOP</span><i></i><span>功能验收</span><i></i><span>知识沉淀</span></div></section>
+
+      <section id="capabilities" class="capabilities page-section">
+        <div class="section-heading"><div><div class="eyebrow"><i></i> ONE FLOW, MANY OUTPUTS</div><h2>让流程从“被记录”<br /><span>走向“被复用”。</span></h2></div><p>从真实操作中提炼结构化信息，连接记录、编辑、引导、分享和讲解视频。</p></div>
+        <div class="feature-grid">
+          <article class="feature-card feature-primary"><div class="feature-top"><span class="feature-index">01</span><span class="feature-tag">RECORD</span></div><div class="feature-icon">◉</div><h3>像平常一样操作</h3><p>浏览器插件记录页面跳转、点击、输入、快捷键和光标位置，浮窗自动避开截图。</p><div class="feature-visual record-visual"><span class="record-ring"></span><span class="record-point"></span><div class="record-label">capturing action</div></div></article>
+          <article class="feature-card"><div class="feature-top"><span class="feature-index">02</span><span class="feature-tag">EDIT</span></div><div class="feature-icon purple">✦</div><h3>把技术动作说成人话</h3><p>调整步骤、补充文案、选择元素或手动框选。每个步骤都能被产品经理重新定义。</p><div class="mini-list"><span><b>01</b> 打开分析工作台</span><span class="mini-active"><b>02</b> 选择业务指标 <i>✎</i></span><span><b>03</b> 保存并查看结果</span></div></article>
+          <article class="feature-card"><div class="feature-top"><span class="feature-index">03</span><span class="feature-tag">SHARE</span></div><div class="feature-icon cyan">↗</div><h3>让流程真正流动起来</h3><p>生成固定版本的只读分享链接，支持引导回放、Markdown 导出和有效期管理。</p><div class="share-visual"><span class="share-line"></span><span class="share-node one">你</span><span class="share-node two">团队</span><span class="share-node three">客户</span></div></article>
+          <article class="feature-card"><div class="feature-top"><span class="feature-index">04</span><span class="feature-tag">EXPLAIN</span></div><div class="feature-icon pink">◒</div><h3>一条流程，多种表达</h3><p>把截图、动态光标、字幕和语音合成为讲解视频，快速做出有节奏的产品演示。</p><div class="video-visual"><span class="play-button">▶</span><div class="video-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>GENERATE TUTORIAL VIDEO</small></div></article>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="how-section page-section">
+        <div class="section-heading centered"><div><div class="eyebrow"><i></i> FROM ACTION TO ASSET</div><h2>三步，建立你的<br /><span>产品流程资产。</span></h2></div></div>
+        <div class="timeline"><div class="timeline-line"></div><article><span class="timeline-number">01</span><div><h3>记录一次</h3><p>打开你要演示的页面，像平时一样完成一遍操作。</p></div></article><article><span class="timeline-number">02</span><div><h3>编辑成稿</h3><p>修改步骤文案，补齐定位方式，选择要不要保留截图。</p></div></article><article><span class="timeline-number">03</span><div><h3>分享出去</h3><p>回放、导出、生成视频，或者分享一个只读版本给团队和客户。</p></div></article></div>
+      </section>
+
+      <section id="use-cases" class="use-cases page-section"><div class="use-copy"><div class="eyebrow"><i></i> BUILT FOR PRODUCT PEOPLE</div><h2>产品经理的<br /><span>第二双手。</span></h2><p>不用写代码，也不用反复截图。把一次真实操作，沉淀成可沟通、可交付、可复用的产品资产。</p><a class="text-link" href="https://github.com/tianhaoqicatherine-bot/record" target="_blank" rel="noreferrer">进入团队工作台 <span>→</span></a></div><div class="use-collage"><div class="collage-card card-a"><small>产品演示</small><b>功能上线<br />如何使用？</b><span>↗</span></div><div class="collage-card card-b"><small>客户培训</small><b>一看就会的<br />操作指南</b><span>✦</span></div><div class="collage-card card-c"><small>团队协作</small><b>把经验变成<br />流程资产</b><span>◇</span></div></div></section>
+
+      <section id="install" class="install-section page-section">
+        <div class="section-heading"><div><div class="eyebrow"><i></i> GET STARTED IN 3 MINUTES</div><h2>下载之后，<br /><span>这样安装。</span></h2></div><a class="button button-primary install-download extension-download-control" data-download-role="install" href="https://github.com/tianhaoqicatherine-bot/record" target="_blank" rel="noreferrer" aria-disabled="false">下载 Chrome 插件 <span>↓</span></a></div>
+        <div class="install-grid">
+          <article class="install-card"><span class="install-number">01</span><div class="install-symbol">↓</div><h3>下载插件包</h3><p>点击下载按钮得到 ZIP 压缩包，先将它解压到电脑上的固定文件夹。</p><small>建议：不要直接在压缩包内安装</small></article>
+          <article class="install-card"><span class="install-number">02</span><div class="install-symbol">⌘</div><h3>打开扩展管理</h3><p>在 Chrome 地址栏输入 <code>chrome://extensions</code>，打开右上角的「开发者模式」。</p><small>Chrome / Edge 均可使用</small></article>
+          <article class="install-card"><span class="install-number">03</span><div class="install-symbol">↥</div><h3>加载已解压扩展</h3><p>点击「加载已解压的扩展程序」，选择刚刚解压后的 <code>extension</code> 文件夹。</p><small>安装后刷新目标网页即可开始录制</small></article>
+        </div>
+        <div class="install-note"><span>✦</span><p><b>第一次使用？</b> 安装完成后，点击浏览器工具栏里的 Flow Recorder 图标，输入流程名称，点击「开始录制」。</p><a href="https://github.com/tianhaoqicatherine-bot/record" target="_blank" rel="noreferrer">打开工作台 →</a></div>
+      </section>
+
+      <section class="final-cta page-section"><div class="cta-glow"></div><div class="eyebrow"><i></i> START YOUR NEXT FLOW</div><h2>别只告诉别人怎么做。<br /><em>让他们跟着做一遍。</em></h2><div class="hero-actions"><a class="button button-primary extension-download-control" data-download-role="final" href="#install" aria-disabled="false">下载插件并查看安装方法 <span class="download-dot">↓</span></a><a class="button button-ghost" href="https://github.com/tianhaoqicatherine-bot/record" target="_blank" rel="noreferrer">已安装？打开工作台 <span>→</span></a></div></section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="landing.html"><span class="brand-mark">F<span></span></span><span>Flow Recorder</span></a><span>Make every flow reusable.</span><span>Online workspace · 2026</span></footer>
+    <button id="landingThemeToggle" class="landing-theme-toggle" type="button" aria-label="切换到亮色模式"><span class="theme-orbit"></span><span class="theme-icon">☼</span><span class="theme-label">LIGHT</span></button>
+    <script src="landing.js"></script>
+  </body>
+</html>
