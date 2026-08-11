@@ -140,8 +140,19 @@ function renderExtensionDownloadControls() {
     control.classList.toggle('button-maintenance', !extensionDownloadEnabled);
     control.classList.toggle('button-primary', extensionDownloadEnabled);
     control.setAttribute('aria-disabled', String(!extensionDownloadEnabled));
-    if (extensionDownloadEnabled) control.href = role === 'install' ? '/api/extension/download' : '#install';
-    else control.removeAttribute('href');
+    if (extensionDownloadEnabled) {
+      control.href = role === 'install' ? 'flow-recorder-extension.zip' : '#install';
+      if (role === 'install') {
+        control.setAttribute('download', 'flow-recorder-extension.zip');
+        control.removeAttribute('target');
+        control.removeAttribute('rel');
+      } else {
+        control.removeAttribute('download');
+      }
+    } else {
+      control.removeAttribute('href');
+      control.removeAttribute('download');
+    }
   });
   const eyebrow = document.querySelector('#install .eyebrow');
   const heading = document.querySelector('#install .section-heading h2');
@@ -198,13 +209,7 @@ function applyLandingLanguage(language) {
 }
 
 applyLandingLanguage(localStorage.getItem('flow_recorder_landing_language') || 'zh');
-fetch('/api/extension/status', { cache: 'no-store' })
-  .then((response) => response.ok ? response.json() : null)
-  .then((result) => {
-    extensionDownloadEnabled = result?.downloadEnabled === true;
-    renderExtensionDownloadControls();
-  })
-  .catch(() => renderExtensionDownloadControls());
+renderExtensionDownloadControls();
 languageToggle?.addEventListener('click', () => applyLandingLanguage(document.documentElement.lang === 'en' ? 'zh' : 'en'));
 
 const cards = document.querySelectorAll('.feature-card, .timeline article, .collage-card');
@@ -228,4 +233,3 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
     observer.observe(card);
   });
 }
-
