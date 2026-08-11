@@ -29,6 +29,8 @@ const detailTranslations = {
 
 detailTranslations.zh.resumeDownload = '下载简历';
 detailTranslations.en.resumeDownload = 'Download résumé';
+detailTranslations.zh.educationSummary = '浙江大学 · 数字金融硕士在读，课程均分 90+；金融学本科，专业前 30%，推免研究生。';
+detailTranslations.en.educationSummary = 'Zhejiang University · M.Fin. in Digital Finance, 90+ average; B.A. in Finance, top 30%, admitted to graduate study by recommendation.';
 
 let detailLanguage = localStorage.getItem('site-language') === 'en' ? 'en' : 'zh';
 const detailLanguageButton = document.querySelector('.language-toggle');
