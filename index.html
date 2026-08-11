@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="田昊琦的产品经理个人主页" />
+  <title>田昊琦 — 产品经理</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+  <script>document.documentElement.dataset.theme=localStorage.getItem('site-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');</script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><span class="typewriter">Hello, world!</span><i></i></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="blue-cursor" aria-hidden="true"></div>
+
+  <main class="home">
+    <div class="day-sky" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="night-sky" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <header class="nav">
+      <a class="monogram" href="#" aria-label="田昊琦首页"><span data-i18n="monogram">田</span><span>°</span></a>
+      <div class="nav-actions">
+        <div class="available"><i></i> <span data-i18n="available">正在寻找机会</span></div>
+        <a class="setting-button resume-download" href="assets/tian-haoqi-resume.pdf" download="田昊琦-简历.pdf"><span data-i18n="resumeDownload">下载简历</span><b aria-hidden="true">↓</b></a>
+        <button class="setting-button language-toggle" type="button" aria-label="切换语言">EN</button>
+        <button class="setting-button theme-toggle" type="button" aria-label="切换颜色模式"><span aria-hidden="true">◐</span><b data-theme-label>暗色</b></button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="copy">
+        <h1><span class="line"><span data-i18n="name">田昊琦</span><span class="name-dot" data-i18n="nameDot">。</span></span></h1>
+        <p class="intro" data-i18n="intro">关注真实需求与产品体验，喜欢把复杂的问题做简单。</p>
+        <div class="meta">
+          <span data-i18n="skillStrategy">产品策略</span>
+          <span data-i18n="skillInsight">用户洞察</span>
+          <span data-i18n="skillAI">AI 产品</span>
+        </div>
+      </div>
+
+      <div class="photo-zone" data-parallax="photo">
+        <div class="photo-frame">
+          <img src="assets/catherine-lifestyle.jpg" alt="田昊琦和棉花糖的生活照" data-i18n-alt="photoAlt" />
+        </div>
+      </div>
+
+      <div class="orbit" aria-hidden="true"><i></i></div>
+      <span class="spark spark-a" aria-hidden="true">✦</span>
+      <span class="spark spark-b" aria-hidden="true">✳</span>
+
+      <aside class="info-panel" aria-label="基础信息与联系方式" data-i18n-aria="infoAria">
+        <div><span data-i18n="educationLabel">教育</span><b data-i18n="educationValue">浙江大学 · 数字金融硕士在读</b></div>
+        <div class="contact-row">
+          <span data-i18n="contactLabel">联系</span>
+          <p><a href="mailto:cathytian@zju.edu.cn">cathytian@zju.edu.cn ↗</a><a href="https://github.com/tianhaoqicatherine-bot" target="_blank" rel="noreferrer">GitHub ↗</a></p>
+        </div>
+      </aside>
+
+      <div class="cta-guide" aria-hidden="true">
+        <svg viewBox="0 0 112 78" role="presentation">
+          <path d="M5 8C38 10 47 57 104 63" />
+          <path class="arrow-head" d="M95 55L105 63L95 71" />
+        </svg>
+      </div>
+      <a class="details-button" href="projects.html">
+        <span data-i18n="details">查看经历与项目</span><b>↗</b>
+      </a>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
