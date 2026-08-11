@@ -31,6 +31,16 @@ detailTranslations.zh.resumeDownload = '下载简历';
 detailTranslations.en.resumeDownload = 'Download résumé';
 detailTranslations.zh.educationSummary = '浙江大学 · 数字金融硕士在读，课程均分 90+；金融学本科，专业前 30%，推免研究生。';
 detailTranslations.en.educationSummary = 'Zhejiang University · M.Fin. in Digital Finance, 90+ average; B.A. in Finance, top 30%, admitted to graduate study by recommendation.';
+detailTranslations.zh.stageNavAria = '详情页阶段导航';
+detailTranslations.en.stageNavAria = 'Detail page section navigation';
+detailTranslations.zh.stageHello = '你好';
+detailTranslations.en.stageHello = 'Hello';
+detailTranslations.zh.stageExperience = '经历';
+detailTranslations.en.stageExperience = 'Experience';
+detailTranslations.zh.stageProjects = '项目';
+detailTranslations.en.stageProjects = 'Projects';
+detailTranslations.zh.stageMore = '更多';
+detailTranslations.en.stageMore = 'More';
 
 let detailLanguage = localStorage.getItem('site-language') === 'en' ? 'en' : 'zh';
 const detailLanguageButton = document.querySelector('.language-toggle');
@@ -53,6 +63,7 @@ const applyDetailLanguage = (language) => {
     if (value) element.textContent = value;
   });
   document.querySelectorAll('[data-i18n-alt]').forEach((element) => element.alt = copy[element.dataset.i18nAlt]);
+  document.querySelectorAll('[data-i18n-aria]').forEach((element) => element.setAttribute('aria-label', copy[element.dataset.i18nAria]));
   detailLanguageButton.textContent = language === 'zh' ? 'EN' : '中文';
   detailLanguageButton.setAttribute('aria-label', copy.languageAria);
   detailThemeButton.setAttribute('aria-label', copy.themeAria);
@@ -91,3 +102,19 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+
+const stageLinks = [...document.querySelectorAll('.stage-nav a')];
+const stageSections = stageLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+const updateStageNavigation = () => {
+  const marker = window.scrollY + window.innerHeight * 0.38;
+  let current = stageSections[0];
+  stageSections.forEach((section) => {
+    if (section.offsetTop <= marker) current = section;
+  });
+  stageLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${current.id}`));
+};
+stageLinks.forEach((link) => link.addEventListener('click', () => {
+  stageLinks.forEach((item) => item.classList.toggle('active', item === link));
+}));
+window.addEventListener('scroll', updateStageNavigation, { passive: true });
+updateStageNavigation();

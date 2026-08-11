@@ -18,8 +18,15 @@
     <div class="detail-nav-actions"><span data-i18n="navTitle">田昊琦 · 个人详情</span><a class="setting-button detail-resume-download" href="assets/tian-haoqi-resume.pdf" download="田昊琦-简历.pdf"><span data-i18n="resumeDownload">下载简历</span><b aria-hidden="true">↓</b></a><button class="setting-button language-toggle" type="button" aria-label="切换语言">EN</button><button class="setting-button theme-toggle" type="button" aria-label="切换颜色模式"><span aria-hidden="true">◐</span><b data-theme-label>暗色</b></button></div>
   </header>
 
+  <nav class="stage-nav" aria-label="详情页阶段导航" data-i18n-aria="stageNavAria">
+    <a class="active" href="#hello"><b>01</b><span data-i18n="stageHello">你好</span></a>
+    <a href="#experience"><b>02</b><span data-i18n="stageExperience">经历</span></a>
+    <a href="#projects"><b>03</b><span data-i18n="stageProjects">项目</span></a>
+    <a href="#more"><b>04</b><span data-i18n="stageMore">更多</span></a>
+  </nav>
+
   <main>
-    <section class="overview">
+    <section class="overview" id="hello">
       <div class="overview-copy reveal">
         <span class="section-no" data-i18n="sectionHello">01 / 你好</span>
         <h1><span data-i18n="overviewTitle1">从真实问题出发，</span><br><span class="blue-text" data-i18n="overviewTitle2">把产品做清楚。</span></h1>
@@ -37,7 +44,7 @@
       </div>
     </section>
 
-    <section class="section experience">
+    <section class="section experience" id="experience">
       <header class="section-head reveal">
         <span class="section-no" data-i18n="sectionExperience">02 / 经历</span>
         <h2 data-i18n="experienceTitle">我做过的事</h2>
@@ -77,7 +84,7 @@
       </article>
     </section>
 
-    <section class="section projects">
+    <section class="section projects" id="projects">
       <header class="section-head reveal">
         <span class="section-no" data-i18n="sectionProjects">03 / 项目</span>
         <h2 data-i18n="projectsTitle">我正在创造的</h2>
@@ -98,7 +105,7 @@
       </div>
     </section>
 
-    <section class="section more">
+    <section class="section more" id="more">
       <header class="section-head reveal">
         <span class="section-no" data-i18n="sectionMore">04 / 更多</span>
         <h2 data-i18n="moreTitle">工作之外</h2>
