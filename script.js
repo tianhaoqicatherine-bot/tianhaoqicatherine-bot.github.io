@@ -21,6 +21,10 @@ const homeTranslations = {
 
 homeTranslations.zh.resumeDownload = '下载简历';
 homeTranslations.en.resumeDownload = 'Download résumé';
+homeTranslations.zh.campusLabel = '身份';
+homeTranslations.zh.campusValue = '2027 届校招生 · 正在求职';
+homeTranslations.en.campusLabel = 'Status';
+homeTranslations.en.campusValue = 'Class of 2027 · Seeking opportunities';
 
 let currentLanguage = localStorage.getItem('site-language') === 'en' ? 'en' : 'zh';
 const languageButton = document.querySelector('.language-toggle');
