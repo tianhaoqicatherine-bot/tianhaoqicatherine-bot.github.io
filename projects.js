@@ -27,6 +27,9 @@ const detailTranslations = {
   }
 };
 
+detailTranslations.zh.resumeDownload = '下载简历';
+detailTranslations.en.resumeDownload = 'Download résumé';
+
 let detailLanguage = localStorage.getItem('site-language') === 'en' ? 'en' : 'zh';
 const detailLanguageButton = document.querySelector('.language-toggle');
 const detailThemeButton = document.querySelector('.theme-toggle');

@@ -10,3 +10,6 @@ html[data-theme="dark"]{--ice:#090f1d;--paper:#121b2d;--ink:#edf3ff;--blue:#8ba4
 html[lang="en"] .quick-facts strong{font-size:26px;letter-spacing:-.03em}
 html[lang="en"] .section-head h2{font-size:clamp(34px,3.2vw,44px);line-height:1.1;letter-spacing:-.04em;max-width:620px}
 @media(max-width:760px){html[lang="en"] .quick-facts strong{font-size:21px}html[lang="en"] .section-head h2{font-size:clamp(30px,8vw,36px)}}
+
+.detail-resume-download{display:flex;align-items:center;gap:7px;text-decoration:none;white-space:nowrap}.detail-resume-download b{font-size:13px;font-weight:500;line-height:1;transition:transform .2s}.detail-resume-download:hover b{transform:translateY(2px)}
+@media(max-width:760px){.detail-resume-download{gap:4px;font-size:9px!important}.detail-resume-download b{font-size:11px}}
