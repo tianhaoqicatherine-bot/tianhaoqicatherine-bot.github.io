@@ -21,3 +21,11 @@ html[lang="en"] .section-head h2{font-size:clamp(34px,3.2vw,44px);line-height:1.
 @media(max-width:760px){.overview,.section{scroll-margin-top:112px}.stage-nav{left:50%;top:74px;transform:translateX(-50%);display:flex;gap:3px;padding:4px;background:rgba(247,251,253,.85)}.stage-nav a{width:27px;height:27px}.stage-nav span{display:none}html[data-theme="dark"] .stage-nav{background:rgba(18,27,45,.88)}}
 
 html[data-theme="dark"] .project-pink{background:linear-gradient(135deg,#20283a 0%,#282a3d 56%,#302b41 100%);border-color:rgba(154,165,210,.2);color:#fff}
+
+/* Suixing recruiting Copilot project */
+.project-suixing{grid-column:1/-1;min-height:340px;background:linear-gradient(125deg,#e9edff,#e8f5f1);border-color:rgba(82,104,220,.25)}
+.project-suixing h3{margin-top:36px;font-size:clamp(32px,4vw,48px)}
+.project-suixing p{max-width:650px}
+html[data-theme="dark"] .project-suixing{background:linear-gradient(125deg,#1e2949,#173b39);border-color:rgba(139,164,255,.25)}
+@media(max-width:760px){.project-suixing{min-height:360px}}
+
