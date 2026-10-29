@@ -49,8 +49,8 @@ detailTranslations.zh.suixingName = '随行 · HR 外置大脑';
 detailTranslations.en.suixingName = 'Suixing · HR Copilot';
 detailTranslations.zh.suixingBody = '把招聘平台、IM 和邮件里的零散沟通，经过 AI 整理与 HR 校验，转成可回查的档案和可持续跟进的待办。体验悬浮采集、信息归纳与岗位对话。';
 detailTranslations.en.suixingBody = 'Turn scattered recruiting conversations into searchable records and follow-up tasks with AI suggestions and HR review. Explore floating capture, information organization, and job-specific conversations.';
-detailTranslations.zh.suixingTry = '体验交互原型 ↗';
-detailTranslations.en.suixingTry = 'Explore the prototype ↗';
+detailTranslations.zh.suixingTry = '访问产品官网 ↗';
+detailTranslations.en.suixingTry = 'Visit product website ↗';
 
 let detailLanguage = localStorage.getItem('site-language') === 'en' ? 'en' : 'zh';
 const detailLanguageButton = document.querySelector('.language-toggle');
@@ -128,4 +128,5 @@ stageLinks.forEach((link) => link.addEventListener('click', () => {
 }));
 window.addEventListener('scroll', updateStageNavigation, { passive: true });
 updateStageNavigation();
+
 
