@@ -1,0 +1,10 @@
+'use strict';
+window.tingtuSpeech=(()=>{
+ const entries=Object.values(window.tingtuShowcase).flat(),cache=new Map(),player=new Audio();let generation=0,url,unlocked=false;
+ function stop(){generation++;player.pause();player.onended=player.onplaying=player.onerror=null;if(url){URL.revokeObjectURL(url);url=null}}
+ function prepare(text){const item=entries.find(x=>x.text===text);if(!item)return Promise.reject(Error('这段讲解暂未准备好'));if(!cache.has(text))cache.set(text,fetch(new URL(item.audio,document.baseURI)).then(r=>{if(!r.ok)throw Error('讲解加载失败，请重试');return r.blob()}).catch(e=>{cache.delete(text);throw e}));return cache.get(text)}
+ async function unlock(){if(unlocked)return;const current=generation;try{const data=new ArrayBuffer(364),view=new DataView(data);const str=(i,s)=>{for(let k=0;k<s.length;k++)view.setUint8(i+k,s.charCodeAt(k))};str(0,'RIFF');view.setUint32(4,356,true);str(8,'WAVE');str(12,'fmt ');view.setUint32(16,16,true);view.setUint16(20,1,true);view.setUint16(22,1,true);view.setUint32(24,16000,true);view.setUint32(28,32000,true);view.setUint16(32,2,true);view.setUint16(34,16,true);str(36,'data');view.setUint32(40,320,true);const silence=URL.createObjectURL(new Blob([data],{type:'audio/wav'}));player.src=silence;await player.play();unlocked=true;if(current===generation)player.pause();URL.revokeObjectURL(silence)}catch{}}
+ document.addEventListener('pointerdown',unlock,{passive:true});document.addEventListener('keydown',unlock,{passive:true});
+ async function play(text,handlers={}){stop();const current=generation;try{handlers.loading?.();const blob=await prepare(text);if(current!==generation)return;url=URL.createObjectURL(blob);player.src=url;player.onplaying=()=>{if(current===generation)handlers.start?.()};player.onended=()=>{if(current!==generation)return;stop();handlers.end?.()};player.onerror=()=>{if(current!==generation)return;stop();handlers.error?.(Error('音频播放失败，请重试'))};await player.play()}catch(e){if(current!==generation)return;stop();handlers.error?.(Error(e.name==='NotAllowedError'?'点一下“听本站”，即可播放讲解。':e.message))}}
+ return {play,stop,prepare,clear:stop};
+})();

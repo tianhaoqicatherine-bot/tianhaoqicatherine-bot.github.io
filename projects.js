@@ -52,6 +52,16 @@ detailTranslations.en.suixingBody = 'Turn scattered recruiting conversations int
 detailTranslations.zh.suixingTry = '访问产品官网 ↗';
 detailTranslations.en.suixingTry = 'Visit product website ↗';
 
+
+detailTranslations.zh.tingtuType='AI 产品概念与交互 Demo · 2026';
+detailTranslations.en.tingtuType='AI product concept & interactive demo · 2026';
+detailTranslations.zh.tingtuName='听途 · 语音旅行搭子';
+detailTranslations.en.tingtuName='Tingtu · Stories along the road';
+detailTranslations.zh.tingtuBody='把社区旅行经验变成沿途电台。体验科普、观光、人文三条云旅途，转动方向盘，到站听故事，再回看一路引用过的分享。';
+detailTranslations.en.tingtuBody='Turn community travel experiences into a roadside radio. Drive three themed virtual routes, listen at each stop, and revisit the stories referenced along the way.';
+detailTranslations.zh.tingtuTry='手机体验 ↗';
+detailTranslations.en.tingtuTry='Try on mobile ↗';
+
 let detailLanguage = localStorage.getItem('site-language') === 'en' ? 'en' : 'zh';
 const detailLanguageButton = document.querySelector('.language-toggle');
 const detailThemeButton = document.querySelector('.theme-toggle');
@@ -128,5 +138,6 @@ stageLinks.forEach((link) => link.addEventListener('click', () => {
 }));
 window.addEventListener('scroll', updateStageNavigation, { passive: true });
 updateStageNavigation();
+
 
 

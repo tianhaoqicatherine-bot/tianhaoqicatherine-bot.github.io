@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ffffff"><title>听途 · 听见沿途的人</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="driving.css"></head>
+<body data-screen="intro"><svg class="icons" aria-hidden="true"><defs>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M6 3h12v19l-6-4-6 4z"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="8" cy="7" r="3"/><circle cx="16" cy="17" r="3"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7z"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M6 9h1m4 0h1m4 0h1M6 13h1m4 0h1m4 0h1M7 16h10"/></symbol>
+</defs></svg>
+
+<header><a class="brand" href="#" aria-label="听途首页"><span class="brand-icon"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 11v6M10 6v16M15 9v10M20 4v20M25 11v6"/></svg></span><b>听途<small>小红书语音旅程</small></b></a><span class="demo-label">听途 · 手机展示版</span></header>
+<main>
+ <section class="map-area" aria-label="旅程示意地图"><div class="map-art" id="mapArt"><svg class="landscape" viewBox="150 170 820 620" role="img" aria-label="穿过沙丘、芦苇湖与小镇的手绘公路地图">
+     <defs><pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#766a4e" opacity=".14"/></pattern><filter id="shadow"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-opacity=".12"/></filter><linearGradient id="sand" x2="1" y2="1"><stop stop-color="#e5d3ad"/><stop offset="1" stop-color="#d6bd90"/></linearGradient><linearGradient id="lake" x2="1" y2="1"><stop stop-color="#9eccc3"/><stop offset="1" stop-color="#6eaaa4"/></linearGradient></defs>
+     <rect width="1100" height="1000" fill="#eee9d9"/><rect width="1100" height="1000" fill="url(#dots)"/>
+     <path d="M-70 90Q200-90 460 100T1170 90V460Q800 300 620 420T-50 400Z" fill="url(#sand)"/>
+     <g fill="none" stroke="#b79e77" stroke-width="1.3" opacity=".4"><path d="M-40 140Q200-20 460 150T1150 145"/><path d="M-40 160Q200 0 460 170T1150 165"/><path d="M-40 185Q200 25 460 195T1150 190"/><path d="M-40 213Q200 53 460 223T1150 218"/><path d="M-40 245Q200 85 460 255T1150 250"/><path d="M-40 281Q200 121 460 291T1150 286"/><path d="M-40 321Q200 161 460 331T1150 326"/><path d="M-40 366Q200 206 460 376T1150 371"/></g>
+     <path d="M-80 760Q100 590 300 740T700 805Q970 635 1170 860V1100H-80Z" fill="#dce2c7"/>
+     <g fill="none" stroke="#a4b495" opacity=".35"><path d="M-20 850Q120 680 300 810T760 865Q980 745 1150 940"/><path d="M-20 870Q120 700 300 830T760 885Q980 765 1150 960"/><path d="M-20 890Q120 720 300 850T760 905Q980 785 1150 980"/></g>
+     <path d="M690 435C770 410 786 474 853 467S980 499 971 565 868 659 805 626 693 645 657 577 633 455 690 435Z" fill="#bfd4c1"/><path d="M707 455C770 430 792 495 850 486S963 513 950 561 866 631 809 609 718 628 680 575 664 472 707 455Z" fill="url(#lake)"/>
+     <g stroke="#d3ece3" fill="none" opacity=".65"><path d="M740 510q35-9 70 0m35 17q30-7 60 0m-160 40q35-8 70 0m10-17q35-8 70 0"/></g>
+     <path d="M-20 920C160 890 110 676 293 650S558 688 542 519 417 389 532 303 755 349 846 275 918 106 1120 87" stroke="#cec6b1" stroke-width="27" fill="none"/>
+     <path d="M-20 920C160 890 110 676 293 650S558 688 542 519 417 389 532 303 755 349 846 275 918 106 1120 87" stroke="#fffdf6" stroke-width="20" fill="none"/>
+     <path d="M-20 920C160 890 110 676 293 650S558 688 542 519 417 389 532 303 755 349 846 275 918 106 1120 87" stroke="#baae93" stroke-dasharray="9 12" stroke-width="1.8" fill="none"/>
+     <path id="travelPath" d="M197 733C220 671 250 654 293 650S558 688 542 519 417 389 532 303 755 349 846 275" stroke="#ff2442" stroke-width="5" fill="none" stroke-linecap="round"/>
+     <path d="M543 520Q610 470 682 505" stroke="#fffdf6" stroke-width="10" fill="none"/><path d="M293 650Q320 730 420 786" stroke="#fffdf6" stroke-width="10" fill="none"/>
+     <g fill="#a9b38b"><path d="m340 783 13-29 13 29h-8v12h-10v-12zm36 28 13-29 13 29h-8v12h-10v-12zm78-13 13-29 13 29h-8v12h-10v-12z"/><path d="m645 650 12-28 12 28h-7v10h-10v-10zm28 20 12-28 12 28h-7v10h-10v-10z"/></g>
+     <g fill="#b89d7b" stroke="#f3eddf" stroke-width="3"><path d="m241 539 22-17 23 17v35h-45z"/><path d="m292 564 20-14 20 14v30h-40z"/><path d="m201 580 20-14 20 14v30h-40z"/></g>
+     <g fill="#9da889" opacity=".8"><path d="m963 730 30-55 30 55zm-65 0 32-77 32 77zm-688-408 27-52 27 52zm-60 0 35-75 35 75z"/></g>
+     <g fill="#8c8c72" font-family="sans-serif" font-size="14" letter-spacing="4"><text x="160" y="190">风沙在这里慢下来</text><text x="758" y="558" fill="#477f7a">芦苇湖</text><text x="130" y="496">旧街巷</text><text x="742" y="841">往更远的地方</text></g>
+     <g id="car" transform="translate(846 275)" filter="url(#shadow)"><g id="carBody"><rect x="-13" y="-22" width="26" height="44" rx="9" fill="#ffffff" stroke="#1f1f1f" stroke-width="2"/><rect x="-9" y="-12" width="18" height="21" rx="5" fill="#444444"/><path d="M-8-9h16M-8 6h16" stroke="#dddddd" stroke-width="2"/><rect x="-10" y="-20" width="20" height="5" rx="2" fill="#ff2442"/><path d="M-16-10v9M16-10v9M-16 11v6M16 11v6" stroke="#1f1f1f" stroke-width="4" stroke-linecap="round"/></g></g>
+    </svg></div><div id="placeMarkers" class="place-markers"></div><div id="postMarkers" class="post-markers" hidden></div><div id="postTooltip" class="post-tooltip" hidden></div>   <div class="drive-ui" id="driveUI" hidden><div class="drive-speedlines" aria-hidden="true"></div>
+    <div class="drive-top"><div><span class="eyebrow">沿途驾驶 · 云旅途</span><h2>拨动摇杆，去听一个故事。</h2></div><button id="closeDriveBtn" class="drive-close" aria-label="退出开车互动">退出云旅途 <svg><use href="#i-close"/></svg></button></div>
+    <div class="drive-hud"><div><span id="driveSpeed">0</span><small>模拟 km/h</small></div><div class="drive-next"><small>下一站</small><b id="driveDestination">芦苇湖</b><div class="drive-progress"><i id="driveProgress"></i></div></div><span class="drive-badge" id="driveState">已停稳</span></div>
+    <div class="arrival-card" id="arrivalCard" hidden><span id="arrivalIcon">≈</span><div><small id="arrivalLabel">你到啦</small><b id="arrivalTitle">有人在这里，发了会儿呆。</b></div><div class="arrival-actions"><button id="arrivalStoryBtn">听本站 ↗</button><button id="arrivalPostBtn">留下经历</button></div></div>
+    <div class="drive-console">
+     <div class="wheel-area"><div class="wheel-label"><span>拖动摇杆</span><span id="steerValue">松手停下</span></div><div id="joystickBase" class="joystick-base"><span class="joy-mark joy-up">↑</span><span class="joy-mark joy-left">‹</span><span class="joy-mark joy-right">›</span><div id="steeringWheel" class="steering-wheel" role="slider" tabindex="0" aria-label="驾驶摇杆，拖动前进及转向，松手停车，也支持方向键" aria-valuemin="-100" aria-valuemax="100" aria-valuenow="0"><svg viewBox="0 0 90 90" aria-hidden="true"><circle cx="45" cy="45" r="40" fill="#ff2442" stroke="#e91e3b" stroke-width="2"/><circle cx="45" cy="45" r="25" fill="none" stroke="#ffffff" stroke-width="4"/><path d="M22 39h46M33 45l9 24h6l9-24" fill="#ffffff"/><circle cx="45" cy="45" r="9" fill="#ff2442"/><path d="M42 17h6v8h-6z" fill="#ffffff"/></svg></div></div></div>
+     <div class="pedal-area"><span class="game-only-label">云旅途体验</span><p id="driveHint">推摇杆就出发<br>到站自动停，再推继续</p><button id="gasPedal" hidden disabled>前进</button><button id="restartDriveBtn" hidden>再开一次 ↗</button></div>
+     <div class="drive-help"><span>拖动摇杆 / 方向键体验 · 路线辅助驾驶</span><span>正式驾驶场景不展示摇杆，以位置与语音交互</span></div>
+    </div>
+   </div>
+</section>
+ <section id="intro" class="intro-screen"><span class="eyebrow">听见沿途的真实分享</span><h1>路过风景，<br>也听见<span>人。</span></h1><p>把小红书里的沿途经历，说给你听。</p><div class="home-choices"><button id="startBtn" class="primary"><span>开始旅途<small>在路上，听沿途</small></span><svg><use href="#i-arrow"/></svg></button><button id="advanceBtn" class="home-cloud" aria-label="打开云旅途"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M4 9h16M10 14l-2 6m6-6 2 6"/></svg><span>云旅途<small>转动方向盘，去云旅行</small></span></button></div><button id="swipeStart" class="swipe-start">向下滑动，开始旅途 <span>↓</span></button><small class="intro-disclaimer">手机展示版 · 预生成讲解 · 模拟路线</small></section>
+ <section id="journey" class="panel journey-panel" hidden><div class="place-row"><div><span class="eyebrow">你在这里 · 模拟位置</span><h2 id="placeName">沙丘观景台</h2></div></div>
+ <div class="voice-row"><button id="voiceStatusBtn" class="voice-indicator" aria-label="打字问听途"><span class="wave" id="wave"><i></i><i></i><i></i><i></i><i></i></span><span id="wakeLabel">开启聊一聊，随时提问</span></button><span id="wakeStatus" class="status-text" aria-live="polite">已关闭</span></div>
+ <p id="speakingLine" class="speaking-line" hidden></p>
+ <div class="journey-tools"><label class="radio-row chat-control"><span><svg><use href="#i-mic"/></svg> 聊一聊 <small>待开放</small></span><input type="checkbox" id="chatToggle" role="switch" disabled aria-label="聊一聊"><span class="switch"></span></label><label class="radio-row"><span><svg><use href="#i-play"/></svg> 沿途电台</span><input type="checkbox" id="radioToggle" role="switch"><span class="switch"></span></label></div>
+ <button id="publishHereBtn" class="publish-here"><span>＋ 在这里发帖</span><small>记录只保存在当前设备</small></button><button id="endBtn" class="end-button">结束行程 <svg><use href="#i-arrow"/></svg></button></section>
+ <section id="summary" class="summary-screen" hidden><span class="eyebrow">这一路，听见的分享者</span><h1>路走完了，<br>故事留下来。</h1><p id="summaryCount"></p><span class="summary-tip" id="summaryTip">悬停或点击头像，看看你听过的帖子。</span><button id="againBtn" class="summary-again">再走一程 <svg><use href="#i-arrow"/></svg></button></section>
+</main>
+<footer><span id="footerText">在路上，听见不同的生活。</span><span>示意地图 · 非导航</span></footer>
+<div class="modal" id="modal" hidden><div class="backdrop" data-close></div><section class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><div class="sheet-head"><h2 id="sheetTitle"></h2><button class="icon-btn" data-close aria-label="关闭"><svg><use href="#i-close"/></svg></button></div><div id="sheetBody"></div></section></div><div id="toast" role="status"></div>
+<script src="data.js"></script><script src="showcase-data.js"></script><script src="showcase-player.js"></script><script src="app.js"></script><script src="drive-sound.js"></script><script src="driving.js"></script><script src="wav.js"></script><script src="wake.js"></script><script src="routes.js"></script><script src="route-stories.js"></script><script src="showcase.js"></script></body></html>
