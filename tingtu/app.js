@@ -13,7 +13,7 @@ function record(ids){ids.forEach(id=>{if(!seen.has(id))seen.set(id,{id,place:pos
 function speak(a){stopAudio();answer=a;$('#speakingLine').textContent='正在准备声音…';$('#speakingLine').hidden=false;window.tingtuSpeech.play(a.text,{loading(){playing=true;$('#wave').classList.add('playing')},start(){record(a.ids);$('#speakingLine').textContent=a.title},end(){playing=false;window.tingtuWake?.ready?.();$('#wave').classList.remove('playing');$('#speakingLine').hidden=true},error(e){playing=false;window.tingtuWake?.ready?.();$('#wave').classList.remove('playing');$('#speakingLine').textContent=e.message;toast(e.message)}})}
 function toggleAudio(){if(playing)stopAudio();else speak(answer||{title:stops[index].title,text:stops[index].intro,ids:stops[index].postIds})}
 const path=$('#travelPath'),pathLength=path.getTotalLength();
-function measureStops(){return stops.map(s=>{let best=0,err=Infinity;for(let n=0;n<=1000;n++){const d=pathLength*n/1000,p=path.getPointAtLength(d),e=(p.x-s.pos[0])**2+(p.y-s.pos[1])**2;if(e<err){err=e;best=d}}return best})}
+function measureStops(){return window.tingtuGeometry.measure(stops)}
 const stopLengths=measureStops();
 const trail=path.cloneNode();trail.id='visitedPath';trail.setAttribute('stroke','#ff2442');trail.setAttribute('stroke-width','6');path.after(trail);
 function track(d){if(!started)return;minDistance=Math.min(minDistance,d);maxDistance=Math.max(maxDistance,d);trail.style.strokeDasharray=`${Math.max(2,maxDistance-minDistance)} ${pathLength+1}`;trail.style.strokeDashoffset=-minDistance}

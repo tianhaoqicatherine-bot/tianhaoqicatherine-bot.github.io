@@ -58,3 +58,6 @@ footer{font-size:10px;letter-spacing:0;color:#999}
 @media(max-width:365px){.home-choices button svg{display:none}.home-choices button{justify-content:center}}
 
 .chat-control{cursor:pointer}.journey-tools .chat-control{padding-right:14px;border-right:1px solid #eee}.journey-tools{gap:14px}.journey-tools .radio-row>span:first-child{white-space:nowrap}.voice-indicator{cursor:pointer}
+
+/* Mobile entry: avoid animating the layout of the full SVG map. */
+@media(max-width:700px){.map-area{transition:none}.backdrop{backdrop-filter:none}.journey-panel{animation:appear .14s ease-out}}
