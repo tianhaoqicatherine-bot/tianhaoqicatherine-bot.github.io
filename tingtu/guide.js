@@ -10,5 +10,5 @@
  }
  $('#guideBtn').onclick=showGuide;$('#driveGuideBtn').onclick=showGuide;
  let seen=false;try{seen=localStorage.getItem(key)==='1'}catch{}
- if(!seen)requestAnimationFrame(()=>setTimeout(()=>{if(!started&&$('#modal').hidden)showGuide()},120));
+ if(!seen)requestAnimationFrame(()=>setTimeout(()=>{if(!started&&$('#modal').hidden&&!document.body.classList.contains('search-open'))showGuide()},120));
 })();
