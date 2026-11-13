@@ -3,7 +3,8 @@ window.tingtuDriveMusic=(()=>{
  let context,gain,bufferPromise,source,active=false,enabled=true,version=0,ducked=false,offset=0,startedAt=0,duration=60;
  try{enabled=localStorage.getItem('tingtu-bgm')!=='off'}catch{}
  function audioContext(){if(!context){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;context=new AC();gain=context.createGain();gain.gain.value=0;gain.connect(context.destination)}return context}
- function paint(){const button=document.querySelector('#musicToggle');if(!button)return;button.dataset.state=source?'playing':active&&enabled?'loading':enabled?'paused':'off';button.setAttribute('aria-pressed',String(enabled));button.setAttribute('aria-label',enabled?'关闭背景音乐':'开启背景音乐');button.textContent=enabled?'♫ 音乐开':'♫ 音乐关'}
+ function buttons(){return ['#musicToggle','#pageMusicToggle'].map(id=>document.querySelector(id)).filter(Boolean)}
+ function paint(){for(const button of buttons()){button.dataset.state=source?'playing':active&&enabled?'loading':enabled?'paused':'off';button.setAttribute('aria-pressed',String(enabled));button.setAttribute('aria-label',enabled?'关闭背景音乐':'开启背景音乐');button.textContent='♫';button.title=enabled?'关闭背景音乐':'开启背景音乐'}}
  function unlock(){const ctx=audioContext();ctx?.resume().catch(()=>{})}
  for(const event of ['pointerdown','touchend','click','keydown'])document.addEventListener(event,unlock,{passive:true});
  function prepare(){if(!bufferPromise)bufferPromise=fetch(new URL('audio/bgm.mp3',document.baseURI)).then(r=>{if(!r.ok)throw Error('音乐加载失败');return r.arrayBuffer()}).then(data=>audioContext().decodeAudioData(data)).then(buffer=>{duration=buffer.duration;return buffer}).catch(e=>{bufferPromise=null;throw e});return bufferPromise}
@@ -13,6 +14,6 @@ window.tingtuDriveMusic=(()=>{
  function pause(){active=false;halt(true)}
  function stop(){active=false;halt(false)}
  function toggle(){enabled=!enabled;try{localStorage.setItem('tingtu-bgm',enabled?'on':'off')}catch{}paint();if(!enabled)halt(true);else if(active)start()}
- const button=document.querySelector('#musicToggle');if(button)button.onclick=toggle;paint();
+ for(const button of buttons())button.onclick=toggle;paint();
  return {start,stop,pause,update};
 })();
