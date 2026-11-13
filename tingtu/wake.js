@@ -48,7 +48,7 @@
     }else{part.attack=0;if(!playing&&!part.talking)noiseFloor=noiseFloor*.97+Math.min(rms,.018)*.03}
     if(part.talking&&playing){stopAudio();paint('我在听，你说','正在听你说话')}
     if(playing&&!part.talking)paint('说话就能打断我','正在播报');
-    if((part.talking&&now-part.lastVoice>750)||now-part.began>(part.talking?20000:10000))part.recorder.stop();
+    if((part.talking&&now-part.lastVoice>1400)||now-part.began>(part.talking?20000:10000))part.recorder.stop();
    },80);
   }catch(e){if(current!==session)return;stop();paint('可打字问我',e.name==='NotAllowedError'?'麦克风未授权':e.name==='NotFoundError'?'未找到麦克风':'语音启动失败，请重新开启')}
  }
