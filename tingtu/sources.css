@@ -2,3 +2,7 @@
 .source-card-images svg,.note-detail-cover svg{stroke:none;fill:none;border:0}
 
 .source-card-images img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;display:block}.note-detail-cover img{display:block;width:100%;height:230px;object-fit:cover}
+
+.post-marker>span{max-width:72px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.post-marker{box-shadow:0 2px 10px #00000012}.post-marker>span{background:#fff;border:1px solid #eee;padding:3px 5px}
+
+.post-marker{scale:var(--marker-scale,1)}.post-marker:hover,.post-marker:focus-visible{scale:calc(var(--marker-scale,1)*1.12)}

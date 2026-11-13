@@ -4,6 +4,7 @@
  let sourceFocus=null;
  showSheet=function(title,html){sheet.classList.remove('sources-sheet','note-sheet');originalShow(title,html);sheet.scrollTop=0};
  function ids(){const list=new Set();for(const id of seen.keys()){if(!posts[id]||!profile[id])continue;for(const related of (stops[postPlace[id]]?.displayPostIds?[...stops[postPlace[id]].postIds,...stops[postPlace[id]].displayPostIds]:[id]))if(posts[related]&&profile[related])list.add(related)}return [...list]}
+ summaryPostIds=ids;
  function refresh(){const list=ids();for(const selector of ['#journeySourcesBtn','#summarySourcesBtn']){const button=$(selector);button.hidden=!list.length;button.innerHTML=`<span>相关 ${list.length} 篇笔记</span><span class="sources-avatars">${list.slice(0,3).map(avatar).join('')}</span><span aria-hidden="true">›</span>`}const arrival=$('#arrivalSourcesBtn');arrival.hidden=!stops[index].postIds.some(id=>seen.has(id))}
  record=function(list){originalRecord(list);refresh()};showStop=function(...args){originalStop(...args);refresh()};paintPostMarkers=function(){originalMarkers();refresh()};
  // Illustration previews represent the demo's places, not photographs from real posts.
