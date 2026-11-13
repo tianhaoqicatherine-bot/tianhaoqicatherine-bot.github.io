@@ -15,4 +15,4 @@ function chooseRoute(mode='journey'){
 }
 const beginJourney=start;
 start=chooseRoute;
-$('#startBtn').onclick=()=>chooseRoute('journey');$('#advanceBtn').onclick=()=>chooseRoute('cloud');$('#swipeStart').onclick=()=>chooseRoute('journey');$('#againBtn').onclick=()=>returnHome();
+$('#startBtn').onclick=()=>chooseRoute('journey');$('#advanceBtn').onclick=()=>chooseRoute('cloud');$('#againBtn').onclick=()=>returnHome();
